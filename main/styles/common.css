@@ -1,0 +1,176 @@
+:root {
+    --primary-color: rgb(107, 107, 180);
+    --hover-color: rgb(70, 70, 119);
+}
+
+/* general */
+
+html {
+    height: 100%;
+    margin: 0;
+
+    background-image: url("../imagenes/fondo.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight: 100;
+}
+
+/* nav */
+
+.nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: red;
+    color: #fff;
+    padding-right: 10px;
+}
+
+/* logo */
+
+.navlogo {
+    display: flex;
+    gap: 10px;
+}
+
+.navlogoimg {
+    height: 100px;
+}
+
+.navlogotitle {
+    align-self: center;
+}
+
+.navlinks a {
+    color: #fff;
+}
+
+/* navlinks */
+
+.navlinks {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.navlinks li:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.navlinks li {
+    padding: 10px;
+}
+
+.navselected {
+    padding-bottom: 3px;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+/* responsive menu */
+
+input[type=checkbox]{
+    display: none;
+} 
+
+.navtoggle {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navlinks { 
+        display:none;
+        position: absolute;
+        background-color: red;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .navlinks li:hover {
+        display: inline-block;
+        background-color: var(--primary-color);
+        transition: 0.3s ease;
+    }
+
+    input[type=checkbox]:checked ~ .navlinks{
+        display: block;
+    }
+
+    .navtoggle {
+        display: block;
+    }
+}
+
+/* content */
+
+.content {
+    padding: 5vw;
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        padding: 2vw;
+    }
+}
+
+/* formularios */
+
+input[type=text], input[type=number], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=radio] {
+    margin: 4px 0;
+  }
+  
+  input[type=submit]:hover {
+    background-color: var(--hover-color);
+  }

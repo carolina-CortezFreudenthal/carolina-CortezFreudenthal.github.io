@@ -4,52 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/sobremi.css">
     <title>Sobre mi</title>
 </head>
-<a href="/main/index_esqueleto.html">Inicio</a>  
-<a  href="/main/secciones/crianza.html">¿Que es la crianza positiva?</a>
-<a  href="/main/secciones/contactame.html">Contactame</a>
 <body>
-    <h1>Sobre mi</h1>
-    <div>
-        <p>Realmente no hay mucho que decir:
-        <ul>
-            <li>Fui  madre a los 21 años,actualmente soy mama de 2 pequenas plagas.</li>
-            <li>Estudie una carrera que no me apasionada hasta la mitad.
-                (como todo joven de 18 años que no sabe que hacer de su vida,se entro a una carrera al azar
-                por la presion de sus padres.)</li>
-            <li>Me interese por el mundo de la crianza positiva y respetuosa gracias a mi cuñada</li>
-            <li>Me gusta informame mucho sobre el tema porque  veo cambios en mi propio hogar gracias a ello.</li>
-            <li> Actualmente estoy aprendiendo a programar,para poder seguir presente junto a ellos.</li>
-        </ul>
-        </p>
-    </div>
-    <hr>
+    <nav class="nav">
+        <div class="navlogo">
+            <img class="navlogoimg" src="../imagenes/logo.png">
+            <h1 class="navlogotitle">Mis dos Plagas</h1>
+        </div>
+        
+        <ul class="navmenu">
+            <input type="checkbox" id="navtoggle" />
+            <label for="navtoggle" class="navtoggle">&#9776;</label>
     
-    <div>
-        <p>
-            Siento que tengo un gran trabajo y una gran resposabiidad(del craidor depende la persona adulta
-            qeu saldra a formar parte de una socidad),por eso opino que informarse sobre el tema
-            de la crianza,es igual a cualquier otra formacion que requiere estudios,con un pequeño detalle:
+            <div class="navlinks">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a class="navselected" href="../secciones/sobremi.html" >Sobre Mi</a></li>
+                <li><a href="../secciones/crianza.html">¿Que es la crianza positiva?</a></li>
+                <li><a href="../secciones/contactame.html">Contactame</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Sobre mi</h1>
+
+        <div class="seccion">
+            <p>Realmente no hay mucho que decir:
             <ul>
-            <li> Un trabajo 24/7/365 sin vacaciones.</li>
+                <li>Fui  madre a los 21 años,actualmente soy mama de 2 pequenas plagas.</li>
+                <li>Estudie una carrera que no me apasionada hasta la mitad.
+                    (como todo joven de 18 años que no sabe que hacer de su vida,se entro a una carrera al azar
+                    por la presion de sus padres.)</li>
+                <li>Me interese por el mundo de la crianza positiva y respetuosa gracias a mi cuñada</li>
+                <li>Me gusta informame mucho sobre el tema porque  veo cambios en mi propio hogar gracias a ello.</li>
+                <li> Actualmente estoy aprendiendo a programar,para poder seguir presente junto a ellos.</li>
             </ul>
-             
+            </p>        
+    
+            <p>
+                Siento que tengo un gran trabajo y una gran resposabiidad (del craidor depende la persona adulta
+                que saldra a formar parte de una socidad), por eso opino que informarse sobre el tema
+                de la crianza, es igual a cualquier otra formacion que requiere estudios, con un pequeño detalle:
+                
+                <ul>
+                    <li> Un trabajo 24/7/365 sin vacaciones.</li>
+                    <li> Un trabajo 24/7/365 sin vacaciones.</li>
+                    <li> Un trabajo 24/7/365 sin vacaciones.</li>
+                </ul>
+            </p>
+        </div>
+    
+        <hr>
+
+        <h1>Algo sobre skills</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et placerat lorem. Nam in rutrum purus. Vivamus placerat semper magna. Phasellus tortor lectus, molestie vitae semper at, pretium congue ex. Etiam neque arcu, venenatis vel scelerisque vel, gravida at libero. Etiam iaculis eros sit amet sapien laoreet hendrerit. Aliquam ac est orci. Vivamus accumsan enim metus, eget dictum metus interdum vel. In dignissim mi massa, a blandit ante vulputate ac. Aliquam lobortis justo sed neque sollicitudin, pulvinar facilisis ipsum pharetra. Ut condimentum arcu et libero bibendum rutrum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean quam quam, egestas venenatis pellentesque ac, sollicitudin a magna.
         </p>
-    </div>
-    <hr>
-        <div>
-            <blockquote><b>En las hombros de una madre queda el peso de educar para todas las generaciones.</b></blockquote>
+
+        <!-- Basado en https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_skill_bar -->
+
+        <div class="skills">
+            <p>HTML</p>
+            <div class="container">
+                <div class="skill html">90%</div>
+            </div>
+
+            <p>CSS</p>
+            <div class="container">
+                <div class="skill css">80%</div>
+            </div>
+
+            <p>JavaScript</p>
+            <div class="container">
+                <div class="skill js">65%</div>
+            </div>
+
+            <p>PHP</p>
+            <div class="container">
+                <div class="skill php">60%</div>
+            </div>
         </div>
 
-        Barras de cualquier cosa
-        <figure>
-            <img src="/main/imagenes/tiempo_en_familia.png"
-                  alt="Imagen familia feliz"
-                  width="550px"
-                  title="tiempo en familia">
+        <hr>
+
+        <div class="footer">
+            <img src="../imagenes/tiempo_en_familia.png"
+                alt="Imagen familia feliz"
+                width="550px"
+                title="tiempo en familia"
+            >
             
-        </figure>
-    <a href="/main/index_esqueleto.html">Volver Inicio</a>
+            <div>
+                <blockquote><b>En las hombros de una madre queda el peso de educar para todas las generaciones.</b></blockquote>
+            </div>
+        </div>
+            
+    </div>
 </body>
 </html>

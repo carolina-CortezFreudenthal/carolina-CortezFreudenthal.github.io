@@ -1,0 +1,29 @@
+.seccion li {
+    list-style-type: square;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.skill {
+    text-align: right;
+    color: white;
+    padding-right: 10px;
+  }
+  
+  .html {width: 90%; background-color: #04AA6D;}
+  .css {width: 80%; background-color: #2196F3;}
+  .js {width: 65%; background-color: #f44336;}
+  .php {width: 60%; background-color: #808080;}

@@ -4,42 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/contactame.css">
     <title>Contactame</title>
 </head>
-<a href="/main/index_esqueleto.html">Inicio</a>  
-<a  href="/main/secciones/sobremi">Sobre Mi</a>
-<a  href="/main/secciones/crianza.html">¿Que es la crianza positiva?</a>
 
 <body>
-    <h1>Contactame!!</h1>
-    <h2>Puedes dejarme tus datos</h2>
-    <form action="registro.html" method="post">
-        <div>
-            <label for="name">Nombre</label>
-            <input required id="name" type="text" placeholder="Aqui tu nombre"> 
+    <nav class="nav">
+        <div class="navlogo">
+            <img class="navlogoimg" src="../imagenes/logo.png">
+            <h1 class="navlogotitle">Mis dos Plagas</h1>
         </div>
-
-        <div>
-            <label for="email">Email</label>
-            <input required id="email" type="text" placeholder="Aqui tu email"> 
-        </div>
-
-        <div>
-            <label for="age">Edad</label>
-            <input required id="age" type="number" min="18" max="99" > 
-        </div>
-
-        <div>
-            <label for="message" >Mensaje</label>
-            <input required id="message" type="text" placeholder="Un mensaje para mi">
-        </div>
-
-
-        Boton
         
-        Y links a redes sociales
+        <ul class="navmenu">
+            <input type="checkbox" id="navtoggle" />
+            <label for="navtoggle" class="navtoggle">&#9776;</label>
+    
+            <div class="navlinks">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../secciones/sobremi.html" >Sobre Mi</a></li>
+                <li><a href="../secciones/crianza.html">¿Que es la crianza positiva?</a></li>
+                <li><a class="navselected" href="../secciones/contactame.html">Contactame</a></li>
+            </div>
+        </ul>
+    </nav>
 
-    </form>
-    <a href="/main/index_esqueleto.html">Volver atras</a>
+    <div class="content">
+        <div class="contacto">
+            <h1>Contactame!!</h1>
+            <h2>Puedes dejarme tus datos</h2>
+
+            <form action="./contactame.html" method="post">
+                <div>
+                    <label for="name">Nombre</label>
+                    <input 
+                        required 
+                        id="name" 
+                        type="text" 
+                        placeholder="Aqui tu nombre"
+                    /> 
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input 
+                        required 
+                        id="email" 
+                        type="text" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        placeholder="Aqui tu email" 
+                        title="ejemplo: mail@proveedor.com"    
+                    /> 
+                </div>
+
+                <div>
+                    <label for="github">Github</label>
+                    <input 
+                        required 
+                        id="github" 
+                        type="text" 
+                        pattern="@[a-z0-9]+"
+                        placeholder="Aqui tu nombre de usuario" 
+                        title="ejemplo: @nombredeusuario"    
+                    /> 
+                </div>
+
+                <div>
+                    <label for="age">Edad</label>
+                    <input 
+                        required 
+                        id="age" 
+                        type="number" 
+                        min="18" 
+                        max="99" 
+                    /> 
+                </div>
+
+                <div>
+                    <label for="message">Mensaje</label>
+                    <textarea 
+                        required 
+                        rows="4" 
+                        cols="50" 
+                        id="message" 
+                        type="text" 
+                        placeholder="Un mensaje para mi"
+                    ></textarea>
+                </div>
+
+                <div>
+                    <p>Donde nos conocimos ?</p>
+                    <input type="radio" id="linkedin" name="donde" value="linkedin">
+                    <label for="linkedin">Linkedin</label><br>
+                    <input type="radio" id="keepcoding" name="donde" value="keepcoding">
+                    <label for="keepcoding">KeepCoding</label><br>
+                    <input checked="checked" type="radio" id="otro" name="donde" value="otro">
+                    <label for="otro">Otro</label>
+                </div>
+
+                
+                <div class="boton">
+                    <input type="submit" value="Submit">
+                </div>
+
+                <div class="redes">
+                    <a href="#"><img src="../imagenes/linkedin.svg" width="15px" height="15px" /></a>
+                    <a href="#"><img src="../imagenes/instagram.svg" width="15px" height="15px" /></a>
+                    <a href="#"><img src="../imagenes/facebook.svg" width="15px" height="15px" /></a>
+                    <a href="#"><img src="../imagenes/github.svg" width="15px" height="15px" /></a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
 </body>
 </html>
