@@ -1,3 +1,8 @@
+.content {
+    background-color: white;
+    opacity: 90%;
+}
+
 .seccion li {
     list-style-type: square;
 }

@@ -1,15 +1,49 @@
 :root {
     --primary-color: rgb(107, 107, 180);
     --hover-color: rgb(70, 70, 119);
+    --font-color: rgb(83, 82, 82);
+}
+
+/* RESET CSS */
+/* https://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    color: var(--font-color);
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* general */
 
 html {
-    height: 100%;
-    margin: 0;
-
-    background-image: url("../imagenes/fondo.jpeg");
+    background-image: url("../imagenes/fondo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -18,8 +52,6 @@ html {
 
 body {
     height: 100vh;
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     overflow-y: scroll;
 }
@@ -45,9 +77,14 @@ h1,h2,h3,h4,h5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: red;
-    color: #fff;
+    background-color: white;
+    border-bottom: solid 1px rgb(214, 214, 214);
+    color: var(--font-color);
     padding-right: 10px;
+    position: absolute;
+    height: 100px;
+    z-index: 100;
+
 }
 
 /* logo */
@@ -58,7 +95,8 @@ h1,h2,h3,h4,h5 {
 }
 
 .navlogoimg {
-    height: 100px;
+    height: 90px;
+    margin-left: 10px;
 }
 
 .navlogotitle {
@@ -66,20 +104,24 @@ h1,h2,h3,h4,h5 {
 }
 
 .navlinks a {
-    color: #fff;
+    color: var(--font-color);
 }
 
 /* navlinks */
 
-.navlinks {
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
+.navlinks { 
+    display: none;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .navlinks li:hover {
+    display: inline-block;
     background-color: var(--primary-color);
-    border-radius: 5px;
     transition: 0.3s ease;
 }
 
@@ -98,49 +140,50 @@ input[type=checkbox]{
     display: none;
 } 
 
-.navtoggle {
-    display: none;
-    font-size: 24px;
-    user-select: none;
-    cursor: pointer;
+input[type=checkbox]:checked ~ .navlinks{
+    display: block;
 }
 
-@media (max-width: 768px) {
-    .navlinks { 
-        display:none;
-        position: absolute;
-        background-color: red;
-        right: 0;
-        left: 0;
-        text-align: center;
-        margin-top: 30px;
+.navtoggle {
+    color: var(--font-color);
+    font-size: 10vw;
+    margin-right: 10px;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navlinks {
+        position: relative;
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
     }
 
     .navlinks li:hover {
-        display: inline-block;
         background-color: var(--primary-color);
+        border-radius: 5px;
         transition: 0.3s ease;
     }
 
-    input[type=checkbox]:checked ~ .navlinks{
-        display: block;
-    }
-
     .navtoggle {
-        display: block;
+        display: none;
+        font-size: 24px;
+        user-select: none;
+        cursor: pointer;
     }
 }
 
 /* content */
 
 .content {
-    padding: 5vw;
+    z-index: 1;
+    margin-top: 100px;
+    padding: 2vw;
 }
 
-
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .content {
-        padding: 2vw;
+        padding: 2vw 5vw;
     }
 }
 
