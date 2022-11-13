@@ -14,6 +14,16 @@
     flex-direction: column;
 }
 
+.footer img {
+    width: 200px;
+}
+
+@media (min-width: 768px) {
+    .footer img {
+        width: 500px;
+    }
+}
+
 .skills {
     display: flex;
     justify-content: center;
@@ -22,13 +32,27 @@
     margin-bottom: 30px;
 }
 
+@keyframes progresshtml {
+    0% { width: 0; }
+    60% { width: 60%; }
+} 
+
+@keyframes progrescss {
+    0% { width: 0; }
+    50% { width: 50%; }
+} 
+
+  @keyframes progressjs {
+    0% { width: 0; }
+    20% { width: 20%; }
+} 
+
 .skill {
     text-align: right;
     color: white;
     padding-right: 10px;
-  }
+}
   
-  .html {width: 90%; background-color: #04AA6D;}
-  .css {width: 80%; background-color: #2196F3;}
-  .js {width: 65%; background-color: #f44336;}
-  .php {width: 60%; background-color: #808080;}
+.html {transition : width 5s ease; background-color: #04AA6D; animation: progresshtml 3s ease-in-out;}
+.css {transition : width 5s ease; background-color: #2196F3; animation: progrescss 3s ease-in-out;}
+.js {transition : width 5s ease; background-color: #f44336; animation: progressjs 3s ease-in-out;}

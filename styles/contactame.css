@@ -20,3 +20,13 @@
     display: flex;
     justify-content: space-around;
 }
+
+.redesicono {
+    padding: 5px;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+
+.redesicono:hover {
+    background-color: rgb(70, 70, 119);
+}
