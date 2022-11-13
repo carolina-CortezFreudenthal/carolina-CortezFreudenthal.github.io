@@ -48,10 +48,15 @@ html {
     background-position: center;
     background-size: 100% 100%;
     overflow: hidden;
+    height: -webkit-fill-available;
 }
 
 body {
+    /* Estoy usando vh porque no pude hacer que 100% llegue hasta el final */
     height: 100vh;
+    /* https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/ */
+    height: -webkit-fill-available;
+
     box-sizing: border-box;
     overflow-y: scroll;
 }

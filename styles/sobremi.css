@@ -42,7 +42,7 @@
     50% { width: 50%; }
 } 
 
-  @keyframes progressjs {
+@keyframes progressjs {
     0% { width: 0; }
     20% { width: 20%; }
 } 
